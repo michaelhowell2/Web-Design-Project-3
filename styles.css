@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* White header */
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure header is always on top */
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo img {
+    height: 225px; /* logo height */
+}
+
+.navbar {
+    width: 95%;
+    background-color: #d32f2f; /* Red banner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* a little touch of background on banner */
+    position: absolute; /* The element is positioned relative to its first positioned (not static) ancestor element */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    height: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Items will have space between them */
+    align-items: center;
+    height: 100%;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff; /* White color */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555; /* grayish color */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 245px;
+}
+
+.video-container {
+    width: 70%;
+    background-color: #222; /* darker grey color */
+    padding: 20px;
+    max-height: 400px;
+    margin-bottom: 20px;
+}
+
+.info-container {
+    width: 70%; /* Adjust the width as needed */
+    background-color: #333; /* dark grey color */
+    padding: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.scrolling-info {
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.blue-banner {
+    background-color: #0000FF; /* Blue background */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    z-index: 800;
+}
+
+.photo-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px; /* Increases gap between the photo boxes */
+    margin-top: 10px;
+}
+
+.photo-box {
+    display: block;
+    width: 250px;
+    height: 165px;
+    background-color: #666;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* contains image in the box container otherwise it was too small or large */
+}
+
+.photo-box:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: red;
+}
+
+footer .contact-form {
+    margin-top: 20px !important;
+}
+
+footer .contact-form input[type="text"],
+footer .contact-form input[type="email"] {
+    width: 15%;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+footer .contact-form textarea {
+    width: 25%;
+    height: 100px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    resize: none; /* contact form kept getting bonkers on me so I found this helped stop it from being resized all the time */
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        flex-direction: row;
+    }
+
+    .video-container {
+        width: 70%;
+    }
+
+    .info-container {
+        flex: 2;
+        margin-left: 20px;
+    }
+}

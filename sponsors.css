@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.logo img {
+    height: 275px; 
+}
+
+.logo {
+    position: fixed; /* Fix the logo's position */
+    top: 50px; 
+    left: -10px; 
+    z-index: 1000; /* Ensure the logo stays on top */
+}
+
+.navbar {
+    width: 100%; 
+    background-color: #d32f2f; /* Red banner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix the navbar's position */
+    top: 0; /* Align the navbar to the top */
+    left: 0; /* Align the navbar to the left */
+    right: 0; /* Align the navbar to the right */
+    padding: 5px;
+    z-index: 999; /* Ensure the navbar stays on top but below the logo */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 10px; 
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    text-align: center; /* Center text content */
+    margin-top: 100px; /* Add margin to prevent content from hiding behind the navbar */
+}
+
+.sponsor-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sponsor {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.sponsor img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.sponsor h2 {
+    margin-top: 10px;
+}
+
+.sponsor p {
+    margin-top: 5px;
+    color: black; 
+    font-weight: bold;
+}
+
+.sponsor.sponsor-white-bg {
+    background-color: #fff; /* White background */
+}
